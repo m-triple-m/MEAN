@@ -31,8 +31,8 @@ export class RegisterComponent implements OnInit {
 
   submitForm(formdata){
     
-    //do stuff to with formdata
-    
+    console.log(formdata);
+    this.userservice.adduser(formdata); 
   }
 
   deleteUser(index){
