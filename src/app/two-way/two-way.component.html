@@ -1,0 +1,32 @@
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-body">
+            <input class="form-control" #input1 (change) = "setName(input1.value)">
+
+            <h1>Name : {{name}}</h1>
+
+            <input class="form-control" #input2 (change) = "setName(input2.value)">
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <input class="form-control" [(ngModel)]="name">
+
+            <h1>Name : {{name}}</h1>
+
+            <input class="form-control" [(ngModel)]="name"> 
+        </div>
+    </div>
+    <div style="background-color: rgb(100, 100, 100);"></div>
+    <div class="card mt-5" style="height : 20rem" [style] = "{'background-color' : 'rgb('+red+','+green+','+blue+')'}">
+        <div class="card-body">
+            <h1>Two way data binding is awesome</h1>
+            <input class="form-control" [(ngModel)]="color" type="color">
+
+            <input type="range" min="0" max="255" [(ngModel)]="red">
+            <input type="range" min="0" max="255" [(ngModel)]="green">
+            <input type="range" min="0" max="255" [(ngModel)]="blue">
+        </div>
+    </div>
+</div>

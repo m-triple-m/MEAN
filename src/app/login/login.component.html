@@ -1,0 +1,20 @@
+<div class="container mt-5">
+    <div class="card bg-dark text-light">
+        <h1 class="text-center">
+            Sign Up
+        </h1>
+        <hr>
+        <div class="card-body">
+            <form [formGroup]="loginform" (submit)="submitForm(loginform.value)">
+
+                <label class="mt-4">Username</label>
+                <input class="form-control" formControlName="username">
+
+                <label class="mt-4">Password</label>
+                <input class="form-control" formControlName="password">
+
+                <button class="btn btn-danger mt-5">Submit</button>
+            </form>
+ 
+        </div>
+    </div>

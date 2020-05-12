@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <form [formGroup]="myform" (submit)="submitForm(myform.value)">
+                <label>Name</label>
+                <input class="form-control" formControlName = "name">
+
+                <label>Username</label>
+                <input class="form-control" formControlName="username">
+
+                <label>Email</label>
+                <input class="form-control" formControlName="email">
+
+                <button class="mt-5" class="btn btn-danger">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
